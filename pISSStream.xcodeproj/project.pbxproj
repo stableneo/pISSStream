@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D48D39102D1301C1006288CB /* LightstreamerClient in Frameworks */ = {isa = PBXBuildFile; productRef = D48D390F2D1301C1006288CB /* LightstreamerClient */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D48D38EE2D12F51D006288CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D48D38D42D12F51C006288CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D48D38DB2D12F51C006288CB;
+			remoteInfo = pISSStream;
+		};
+		D48D38F82D12F51D006288CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D48D38D42D12F51C006288CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D48D38DB2D12F51C006288CB;
+			remoteInfo = pISSStream;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D48D38DC2D12F51C006288CB /* pISSStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pISSStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D48D38ED2D12F51D006288CB /* pISSStreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pISSStreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D48D38F72D12F51D006288CB /* pISSStreamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pISSStreamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D48D38DE2D12F51C006288CB /* pISSStream */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = pISSStream;
+			sourceTree = "<group>";
+		};
+		D48D38F02D12F51D006288CB /* pISSStreamTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = pISSStreamTests;
+			sourceTree = "<group>";
+		};
+		D48D38FA2D12F51D006288CB /* pISSStreamUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = pISSStreamUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D48D38D92D12F51C006288CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D48D39102D1301C1006288CB /* LightstreamerClient in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48D38EA2D12F51D006288CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48D38F42D12F51D006288CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D48D38D32D12F51C006288CB = {
+			isa = PBXGroup;
+			children = (
+				D48D38DE2D12F51C006288CB /* pISSStream */,
+				D48D38F02D12F51D006288CB /* pISSStreamTests */,
+				D48D38FA2D12F51D006288CB /* pISSStreamUITests */,
+				D48D390E2D1301BE006288CB /* Frameworks */,
+				D48D38DD2D12F51C006288CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D48D38DD2D12F51C006288CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D48D38DC2D12F51C006288CB /* pISSStream.app */,
+				D48D38ED2D12F51D006288CB /* pISSStreamTests.xctest */,
+				D48D38F72D12F51D006288CB /* pISSStreamUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D48D390E2D1301BE006288CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D48D38DB2D12F51C006288CB /* pISSStream */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D48D39012D12F51D006288CB /* Build configuration list for PBXNativeTarget "pISSStream" */;
+			buildPhases = (
+				D48D38D82D12F51C006288CB /* Sources */,
+				D48D38D92D12F51C006288CB /* Frameworks */,
+				D48D38DA2D12F51C006288CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D48D390D2D12FAD5006288CB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D48D38DE2D12F51C006288CB /* pISSStream */,
+			);
+			name = pISSStream;
+			packageProductDependencies = (
+				D48D390F2D1301C1006288CB /* LightstreamerClient */,
+			);
+			productName = pISSStream;
+			productReference = D48D38DC2D12F51C006288CB /* pISSStream.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D48D38EC2D12F51D006288CB /* pISSStreamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D48D39042D12F51D006288CB /* Build configuration list for PBXNativeTarget "pISSStreamTests" */;
+			buildPhases = (
+				D48D38E92D12F51D006288CB /* Sources */,
+				D48D38EA2D12F51D006288CB /* Frameworks */,
+				D48D38EB2D12F51D006288CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D48D38EF2D12F51D006288CB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D48D38F02D12F51D006288CB /* pISSStreamTests */,
+			);
+			name = pISSStreamTests;
+			packageProductDependencies = (
+			);
+			productName = pISSStreamTests;
+			productReference = D48D38ED2D12F51D006288CB /* pISSStreamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D48D38F62D12F51D006288CB /* pISSStreamUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D48D39072D12F51D006288CB /* Build configuration list for PBXNativeTarget "pISSStreamUITests" */;
+			buildPhases = (
+				D48D38F32D12F51D006288CB /* Sources */,
+				D48D38F42D12F51D006288CB /* Frameworks */,
+				D48D38F52D12F51D006288CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D48D38F92D12F51D006288CB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D48D38FA2D12F51D006288CB /* pISSStreamUITests */,
+			);
+			name = pISSStreamUITests;
+			packageProductDependencies = (
+			);
+			productName = pISSStreamUITests;
+			productReference = D48D38F72D12F51D006288CB /* pISSStreamUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D48D38D42D12F51C006288CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					D48D38DB2D12F51C006288CB = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					D48D38EC2D12F51D006288CB = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = D48D38DB2D12F51C006288CB;
+					};
+					D48D38F62D12F51D006288CB = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = D48D38DB2D12F51C006288CB;
+					};
+				};
+			};
+			buildConfigurationList = D48D38D72D12F51C006288CB /* Build configuration list for PBXProject "pISSStream" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D48D38D32D12F51C006288CB;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D48D390B2D12FABA006288CB /* XCRemoteSwiftPackageReference "Lightstreamer-lib-client-swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D48D38DD2D12F51C006288CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D48D38DB2D12F51C006288CB /* pISSStream */,
+				D48D38EC2D12F51D006288CB /* pISSStreamTests */,
+				D48D38F62D12F51D006288CB /* pISSStreamUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D48D38DA2D12F51C006288CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48D38EB2D12F51D006288CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48D38F52D12F51D006288CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D48D38D82D12F51C006288CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48D38E92D12F51D006288CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48D38F32D12F51D006288CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D48D38EF2D12F51D006288CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D48D38DB2D12F51C006288CB /* pISSStream */;
+			targetProxy = D48D38EE2D12F51D006288CB /* PBXContainerItemProxy */;
+		};
+		D48D38F92D12F51D006288CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D48D38DB2D12F51C006288CB /* pISSStream */;
+			targetProxy = D48D38F82D12F51D006288CB /* PBXContainerItemProxy */;
+		};
+		D48D390D2D12FAD5006288CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = D48D390C2D12FAD5006288CB /* LightstreamerClient */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D48D38FF2D12F51D006288CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D48D39002D12F51D006288CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		D48D39022D12F51D006288CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = pISSStream/pISSStream.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"pISSStream/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				FUSE_BUILD_SCRIPT_PHASES = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStream;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		D48D39032D12F51D006288CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = pISSStream/pISSStream.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"pISSStream/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				FUSE_BUILD_SCRIPT_PHASES = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStream;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		D48D39052D12F51D006288CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStreamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pISSStream.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pISSStream";
+			};
+			name = Debug;
+		};
+		D48D39062D12F51D006288CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStreamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pISSStream.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pISSStream";
+			};
+			name = Release;
+		};
+		D48D39082D12F51D006288CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStreamUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = pISSStream;
+			};
+			name = Debug;
+		};
+		D48D39092D12F51D006288CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStreamUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = pISSStream;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D48D38D72D12F51C006288CB /* Build configuration list for PBXProject "pISSStream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D48D38FF2D12F51D006288CB /* Debug */,
+				D48D39002D12F51D006288CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D48D39012D12F51D006288CB /* Build configuration list for PBXNativeTarget "pISSStream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D48D39022D12F51D006288CB /* Debug */,
+				D48D39032D12F51D006288CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D48D39042D12F51D006288CB /* Build configuration list for PBXNativeTarget "pISSStreamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D48D39052D12F51D006288CB /* Debug */,
+				D48D39062D12F51D006288CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D48D39072D12F51D006288CB /* Build configuration list for PBXNativeTarget "pISSStreamUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D48D39082D12F51D006288CB /* Debug */,
+				D48D39092D12F51D006288CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D48D390B2D12FABA006288CB /* XCRemoteSwiftPackageReference "Lightstreamer-lib-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lightstreamer/Lightstreamer-lib-client-swift/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D48D390C2D12FAD5006288CB /* LightstreamerClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D48D390B2D12FABA006288CB /* XCRemoteSwiftPackageReference "Lightstreamer-lib-client-swift" */;
+			productName = LightstreamerClient;
+		};
+		D48D390F2D1301C1006288CB /* LightstreamerClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D48D390B2D12FABA006288CB /* XCRemoteSwiftPackageReference "Lightstreamer-lib-client-swift" */;
+			productName = LightstreamerClient;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D48D38D42D12F51C006288CB /* Project object */;
+}
