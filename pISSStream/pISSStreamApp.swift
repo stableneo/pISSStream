@@ -10,11 +10,23 @@ struct piSSStreamApp: App {
 
     var body: some Scene {
         MenuBarExtra {
-            Button("Quit") {
-                NSApplication.shared.terminate(nil)
+            VStack {
+                // Connection status text
+                Text(appState.isConnected ? "Connected" : "Connection Lost")
+                    .foregroundColor(appState.isConnected ? .green : .red)
+                    .font(.caption)
+                
+                Divider()
+                
+                Button("Quit") {
+                    NSApplication.shared.terminate(nil)
+                }
             }
         } label: {
-            PissLabel(amount: appState.pissAmount)
+            PissLabel(
+                amount: appState.pissAmount,
+                isConnected: appState.isConnected
+            )
         }
     }
 }

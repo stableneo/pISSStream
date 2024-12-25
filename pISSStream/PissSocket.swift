@@ -15,13 +15,15 @@ actor PissActor {
         subsystem: "social.bsky.jaennaet.pISSStream", category: "PissActor")
 
     class SubscriptionDelegateImpl: SubscriptionDelegate {
-        let logger = Logger(
+        private let logger = Logger(
             subsystem: "social.bsky.jaennaet.StreamingPiss",
             category: "SubscriptionDelegate")
-
+        
         let (stream, continuation) = AsyncStream.makeStream(of: String.self)
+        private let onConnectionStatusChange: (Bool) -> Void
 
-        init() {
+        init(appState: AppState, onConnectionStatusChange: @escaping (Bool) -> Void) {
+            self.onConnectionStatusChange = onConnectionStatusChange
             logger.debug("SubscriptionDelegateImpl.init()")
         }
 
@@ -59,7 +61,7 @@ actor PissActor {
             forItemName itemName: String?, itemPos: UInt
         ) {
             logger.error("Lost updates: \(lostUpdates) for item: \(itemName ?? "unknown")")
-            // Here you can add additional logic to notify the UI or update state
+            onConnectionStatusChange(false)
         }
 
         func subscriptionDidRemoveDelegate(_ subscription: Subscription) {}
@@ -86,13 +88,22 @@ actor PissActor {
         adapterSet: "ISSLIVE")
     
     let stream: AsyncStream<String>
-    init() {
+    init(appState: AppState) {
         logger.debug("PissActor.init()")
         client.connect()
         let pissTankSub = Subscription(
             subscriptionMode: .MERGE, items: ["NODE3000005"],
-            fields: ["Value" /* , "TimeStamp" */])
-        let delegate = SubscriptionDelegateImpl()
+            fields: ["Value"])
+        
+        let delegate = SubscriptionDelegateImpl(
+            appState: appState,
+            onConnectionStatusChange: { isConnected in
+                Task { @MainActor in
+                    appState.isConnected = isConnected
+                }
+            }
+        )
+        
         self.stream = delegate.stream
         pissTankSub.addDelegate(delegate)
         client.subscribe(pissTankSub)
