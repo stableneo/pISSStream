@@ -10,7 +10,6 @@ pISSStream is a macOS menu bar app that shows how full the International Space S
 
 Not the epitome of good coding practices since this was my first Swift & macOS app ever, may break in exciting ways at the slightest excuse.
 
-- doesn't tell you if the signal is lost
 - shrugs at stale data
 - doesn't bother with error handling
 
