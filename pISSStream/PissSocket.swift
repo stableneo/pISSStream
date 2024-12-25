@@ -42,10 +42,13 @@ actor PissSocket {
         func subscription(
             _ subscription: Subscription, didUpdateItem itemUpdate: ItemUpdate
         ) {
+            /// The logs show that we're getting two different types of updates with different field sets: TIME_000001 and NODE3000005.
             /// Debug: Log all available fields
             logger.debug("Available fields: \(subscription.fields!.joined(separator: ", "))")
             
             /// Handle updates based on subscription type
+            /// Signal status tracking via a new subscription to TIME_000001
+            /// Signal status update: TimeStamp, Status.Class, Status
             if subscription.items![0] == "TIME_000001" {
                 /// Signal status update
                 if let status = itemUpdate.value(withFieldName: "Status.Class") {
@@ -54,7 +57,7 @@ actor PissSocket {
                     onSignalStatusChange(hasSignal)
                 }
             } else {
-                /// Piss tank value update
+                /// Piss tank value update: Value, Status, TimeStamp
                 if let value = itemUpdate.value(withFieldName: "Value") {
                     let newValue = value + "%"
                     logger.debug("received value update: \(newValue)")
