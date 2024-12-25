@@ -11,13 +11,17 @@ struct PissLabel: View {
     let amount: String
     let isConnected: Bool
     
+	private var labelSymbols: String {
+		isConnected ? "🧑🏽‍🚀🚽" : "🧑🏽‍🚀❗"
+	}
+	
     var body: some View {
         HStack(spacing: 4) {
             Circle()
                 .fill(isConnected ? Color.green : Color.red)
                 .frame(width: 8, height: 8)
             
-            Text("🧑🏽‍🚀🚽\(amount)")
+			Text("\(labelSymbols)\(amount)")
                 .font(.system(size: 12, weight: .bold, design: .default))
                 .opacity(isConnected ? 1.0 : 0.5)
         }
