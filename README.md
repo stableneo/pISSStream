@@ -4,7 +4,7 @@ pISSStream is a macOS menu bar app that shows how full the International Space S
 
 ![](https://panthercap.us-east.host.bsky.network/xrpc/com.atproto.sync.getBlob?did=did%3Aplc%3Acl3kuq4sxg3jpfjtom4gnamx&cid=bafkreidthbrhc7pjez4g445dpontwyefusimny45kja57twy2obshwtsn4)
 
-[Download](https://github.com/Jaennaet/pISSStream/releases/download/v0.2/pISSStream.dmg) yours while supplies last!
+[Download](https://github.com/Jaennaet/pISSStream/releases/download/v0.2/pISSStream.0.2.dmg) yours while supplies last!
 
 Uses NASA's official public ISS telemetry stream, provided by [Lightstreamer](https://lightstreamer.com/).
 
