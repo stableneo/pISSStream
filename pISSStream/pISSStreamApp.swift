@@ -31,6 +31,18 @@ struct pISSStreamApp: App {
                 isConnected: appState.isConnected && appState.hasSignal
             )
         }
+        #elseif os(visionOS)
+        // visionOS Interface
+        WindowGroup {
+            ContentView()
+                .environmentObject(appState)
+        }
+        .windowStyle(.plain)
+        .defaultSize(width: 400, height: 300)
+        
+        ImmersiveSpace(id: "ISSSpace") {
+            // Optional: Add immersive content here
+        }
         #else
         // iOS Interface
         WindowGroup {
