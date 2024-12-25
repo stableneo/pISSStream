@@ -57,7 +57,10 @@ actor PissActor {
         func subscription(
             _ subscription: Subscription, didLoseUpdates lostUpdates: UInt,
             forItemName itemName: String?, itemPos: UInt
-        ) {}
+        ) {
+            logger.error("Lost updates: \(lostUpdates) for item: \(itemName ?? "unknown")")
+            // Here you can add additional logic to notify the UI or update state
+        }
 
         func subscriptionDidRemoveDelegate(_ subscription: Subscription) {}
 
