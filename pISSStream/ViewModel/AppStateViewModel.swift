@@ -47,7 +47,7 @@ class AppStateViewModel: ObservableObject {
     private func startPissStream() {
         Task {
             logger.debug("starting pissActor.pissStream() reader")
-            for await amount in await pissActor.pissStream() {
+            for await amount in pissActor.pissStream {
                 self.pissAmount = amount
                 self.isConnected = true
             }
