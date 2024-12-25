@@ -21,5 +21,8 @@ struct PissLabel: View {
                 .font(.system(size: 12, weight: .bold, design: .default))
                 .opacity(isConnected ? 1.0 : 0.5)
         }
+        #if os(iOS)
+        .padding(.horizontal)
+        #endif
     }
 }

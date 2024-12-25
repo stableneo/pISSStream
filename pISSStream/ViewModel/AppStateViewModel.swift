@@ -27,6 +27,22 @@ class AppStateViewModel: ObservableObject {
         startPissStream()
     }
 
+    /// Get the status text based on connection and signal state
+    func getStatusText() -> String {
+        if !isConnected {
+            return "Connection Lost"
+        }
+        return hasSignal ? "Connected" : "Signal Lost (LOS)"
+    }
+    
+    /// Get the status color based on connection and signal state
+    func getStatusColor() -> Color {
+        if !isConnected {
+            return .red
+        }
+        return hasSignal ? .green : .orange
+    }
+
     /// Start the piss stream.
     private func startPissStream() {
         Task {

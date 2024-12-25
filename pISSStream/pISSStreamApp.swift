@@ -1,19 +1,22 @@
+import SwiftUI
 import BackgroundTasks
 import LightstreamerClient
 import os
-import SwiftUI
 
 @main
 struct piSSStreamApp: App {
+    #if os(macOS)
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    #endif
     @StateObject private var appState = AppStateViewModel()
 
     var body: some Scene {
+        #if os(macOS)
+        // MacOS MenuBar Interface
         MenuBarExtra {
             VStack {
-                // Connection status text
-                Text(getStatusText())
-                    .foregroundColor(getStatusColor())
+                Text(appState.getStatusText())
+                    .foregroundColor(appState.getStatusColor())
                     .font(.caption)
                 
                 Divider()
@@ -28,20 +31,13 @@ struct piSSStreamApp: App {
                 isConnected: appState.isConnected && appState.hasSignal
             )
         }
-    }
-    
-    private func getStatusText() -> String {
-        if !appState.isConnected {
-            return "Connection Lost"
+        #else
+        // iOS Interface
+        WindowGroup {
+            ContentView()
+                .environmentObject(appState)
         }
-        return appState.hasSignal ? "Connected" : "Signal Lost (LOS)"
-    }
-    
-    private func getStatusColor() -> Color {
-        if !appState.isConnected {
-            return .red
-        }
-        return appState.hasSignal ? .green : .orange
+        #endif
     }
 }
 
