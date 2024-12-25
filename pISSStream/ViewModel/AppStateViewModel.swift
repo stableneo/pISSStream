@@ -17,7 +17,7 @@ class AppStateViewModel: ObservableObject {
 
     /// Logger for this class.
     private let logger = Logger(
-        subsystem: "social.bsky.jaennaet.pISSStream", category: "AppState")
+        subsystem: "social.bsky.jaennaet.pISSStream", category: "AppStateViewModel")
     
     /// Piss actor to handle the piss stream.
     private lazy var pissActor = PissSocket(appState: self)
