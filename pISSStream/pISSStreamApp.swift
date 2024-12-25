@@ -6,7 +6,7 @@ import SwiftUI
 @main
 struct piSSStreamApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    @StateObject private var appState = AppState()
+    @StateObject private var appState = AppStateViewModel()
 
     var body: some Scene {
         MenuBarExtra {

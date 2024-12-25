@@ -7,22 +7,27 @@
 
 import BackgroundTasks
 import LightstreamerClient
-import SwiftUI
 import os
+import SwiftUI
 
-actor PissActor {
+actor PissSocket {
     let logger = Logger(
-        subsystem: "social.bsky.jaennaet.pISSStream", category: "PissActor")
+        subsystem: "social.bsky.jaennaet.pISSStream", category: "PissActor"
+    )
 
     class SubscriptionDelegateImpl: SubscriptionDelegate {
         private let logger = Logger(
             subsystem: "social.bsky.jaennaet.StreamingPiss",
-            category: "SubscriptionDelegate")
-        
+            category: "SubscriptionDelegate"
+        )
+
+        /// Stream to yield the piss tank value updates.
         let (stream, continuation) = AsyncStream.makeStream(of: String.self)
+        
+        /// Closure to call when the connection status changes.
         private let onConnectionStatusChange: (Bool) -> Void
 
-        init(appState: AppState, onConnectionStatusChange: @escaping (Bool) -> Void) {
+        init(appState: AppStateViewModel, onConnectionStatusChange: @escaping (Bool) -> Void) {
             self.onConnectionStatusChange = onConnectionStatusChange
             logger.debug("SubscriptionDelegateImpl.init()")
         }
@@ -56,6 +61,7 @@ actor PissActor {
             itemPos: UInt
         ) {}
 
+        /// Handle the loss of updates.
         func subscription(
             _ subscription: Subscription, didLoseUpdates lostUpdates: UInt,
             forItemName itemName: String?, itemPos: UInt
@@ -83,18 +89,20 @@ actor PissActor {
         ) {}
     }
 
-    let client: LightstreamerClient = LightstreamerClient(
+    let client: LightstreamerClient = .init(
         serverAddress: "https://push.lightstreamer.com",
-        adapterSet: "ISSLIVE")
-    
+        adapterSet: "ISSLIVE"
+    )
+
     let stream: AsyncStream<String>
-    init(appState: AppState) {
+    init(appState: AppStateViewModel) {
         logger.debug("PissActor.init()")
         client.connect()
         let pissTankSub = Subscription(
             subscriptionMode: .MERGE, items: ["NODE3000005"],
-            fields: ["Value"])
-        
+            fields: ["Value"]
+        )
+
         let delegate = SubscriptionDelegateImpl(
             appState: appState,
             onConnectionStatusChange: { isConnected in
@@ -103,8 +111,8 @@ actor PissActor {
                 }
             }
         )
-        
-        self.stream = delegate.stream
+
+        stream = delegate.stream
         pissTankSub.addDelegate(delegate)
         client.subscribe(pissTankSub)
     }
@@ -113,4 +121,3 @@ actor PissActor {
         return stream
     }
 }
-
