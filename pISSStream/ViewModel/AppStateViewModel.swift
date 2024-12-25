@@ -13,6 +13,7 @@ class AppStateViewModel: ObservableObject {
     static let shared = AppStateViewModel() // Singleton instance
     @Published var pissAmount: String = "N/A"
     @Published var isConnected: Bool = true
+    @Published var hasSignal: Bool = true  // New property for LOS status
 
     /// Logger for this class.
     private let logger = Logger(

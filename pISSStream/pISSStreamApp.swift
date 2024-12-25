@@ -12,8 +12,8 @@ struct piSSStreamApp: App {
         MenuBarExtra {
             VStack {
                 // Connection status text
-                Text(appState.isConnected ? "Connected" : "Connection Lost")
-                    .foregroundColor(appState.isConnected ? .green : .red)
+                Text(getStatusText())
+                    .foregroundColor(getStatusColor())
                     .font(.caption)
                 
                 Divider()
@@ -25,9 +25,23 @@ struct piSSStreamApp: App {
         } label: {
             PissLabel(
                 amount: appState.pissAmount,
-                isConnected: appState.isConnected
+                isConnected: appState.isConnected && appState.hasSignal
             )
         }
+    }
+    
+    private func getStatusText() -> String {
+        if !appState.isConnected {
+            return "Connection Lost"
+        }
+        return appState.hasSignal ? "Connected" : "Signal Lost (LOS)"
+    }
+    
+    private func getStatusColor() -> Color {
+        if !appState.isConnected {
+            return .red
+        }
+        return appState.hasSignal ? .green : .orange
     }
 }
 
