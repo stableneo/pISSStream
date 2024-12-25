@@ -4,7 +4,7 @@ import LightstreamerClient
 import os
 
 @main
-struct piSSStreamApp: App {
+struct pISSStreamApp: App {
     #if os(macOS)
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     #endif
