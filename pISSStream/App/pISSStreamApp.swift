@@ -1,7 +1,7 @@
-import SwiftUI
 import BackgroundTasks
 import LightstreamerClient
 import os
+import SwiftUI
 
 @main
 struct pISSStreamApp: App {
@@ -18,9 +18,9 @@ struct pISSStreamApp: App {
                 Text(appState.getStatusText())
                     .foregroundColor(appState.getStatusColor())
                     .font(.caption)
-                
+
                 Divider()
-                
+
                 Button("Quit") {
                     NSApplication.shared.terminate(nil)
                 }

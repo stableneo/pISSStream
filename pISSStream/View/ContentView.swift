@@ -72,14 +72,14 @@ struct ContentView: View {
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         #if os(visionOS)
-        .onAppear {
-            // Automatically open immersive space when view appears
-            Task {
-                try? await Task.sleep(for: .seconds(1))
-                await openImmersiveSpace(id: "ISSSpace")
-                isImmersive = true
+            .onAppear {
+                // Automatically open immersive space when view appears
+                Task {
+                    try? await Task.sleep(for: .seconds(1))
+                    await openImmersiveSpace(id: "ISSSpace")
+                    isImmersive = true
+                }
             }
-        }
         #endif
     }
 }
