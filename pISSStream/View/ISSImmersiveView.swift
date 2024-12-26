@@ -5,6 +5,7 @@ struct ISSImmersiveView: View {
     @EnvironmentObject var appState: AppStateViewModel
     
     var body: some View {
+    #if os(visionOS)
         RealityView { content in
             // Create a 3D model of the ISS waste tank
             let tank = ModelEntity(
@@ -37,5 +38,6 @@ struct ISSImmersiveView: View {
                 entity.position.y = 0.5 + (height / 2)
             }
         }
+    #endif
     }
 }
