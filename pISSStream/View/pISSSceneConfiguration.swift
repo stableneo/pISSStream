@@ -1,6 +1,13 @@
+//
+//  pISSSceneConfiguration.swift
+//  pISSStream
+//
+//  Created by durul dalkanat on 12/25/24.
+//
+
 import SwiftUI
 
-struct ISSSceneConfiguration: Scene {
+struct pISSSceneConfiguration: Scene {
     @StateObject private var appState = AppStateViewModel()
 
     var body: some Scene {
@@ -14,7 +21,7 @@ struct ISSSceneConfiguration: Scene {
         .defaultSize(width: 400, height: 300)
 
         ImmersiveSpace(id: "ISSSpace") {
-            ISSImmersiveView()
+            pISSImmersiveView()
                 .environmentObject(appState)
         }
 

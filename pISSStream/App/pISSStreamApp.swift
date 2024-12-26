@@ -32,7 +32,7 @@ struct pISSStreamApp: App {
             )
         }
         #elseif os(visionOS)
-        ISSSceneConfiguration()
+        pISSSceneConfiguration()
         #else
         // iOS Interface
         WindowGroup {

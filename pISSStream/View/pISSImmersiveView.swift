@@ -1,7 +1,14 @@
+//
+//  pISSImmersiveView.swift
+//  pISSStream
+//
+//  Created by durul dalkanat on 12/25/24.
+//
+
 import RealityKit
 import SwiftUI
 
-struct ISSImmersiveView: View {
+struct pISSImmersiveView: View {
     @EnvironmentObject var appState: AppStateViewModel
     
     var body: some View {
