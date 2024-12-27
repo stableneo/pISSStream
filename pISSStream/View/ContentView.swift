@@ -35,6 +35,18 @@ struct ContentView: View {
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        #if !os(visionOS)
         .ignoresSafeArea()
+        #else
+        // visionOS specific modifiers
+        .ornament(
+            visibility: .visible,
+            attachmentAnchor: .scene(.top),
+            contentAlignment: .bottom
+        ) {
+            Text(appState.getStatusText())
+                .padding()
+        }
+        #endif
     }
 }
