@@ -20,7 +20,7 @@ If either the connection to Lightstreamer or the ISS telemetry signal itself is 
 
 ## But why?
 
-For some inexplicable reason people keep asking me why I (@Jaennaet) did this.
+For some inexplicable reason people keep asking me why I ([@Jaennaet](https://github.com/Jaennaet)) did this.
 
 My motivation was entirely that I thought this was both a hilariously stupid use of a space station's telemetry stream, but also kind of amazing at the same time. It's remarkable that we live in a world where it takes an afternoon to bang out a joke application that reads actual realtime telemetry data from a space station's toilets. 
 
@@ -28,13 +28,20 @@ Also a great excuse to learn Swift, but the sheer ridiculousness was what drove 
 
 ## Bugs
 
-Not the epitome of good coding practices since this was my first Swift & macOS app ever, may break in exciting ways at the slightest excuse.
+Yeah, probably?
+
+At the very least:
 
 - shrugs at stale data
 - not overly bothered with error handling
 
 ## Errata
 
-I found out about the data stream from https://iss-mimic.github.io/Mimic/, which has considerably more and more interesting stats than just how full the piss tank is. 
+[@Jaennaet](https://github.com/Jaennaet) found out about the data stream from https://iss-mimic.github.io/Mimic/, which has considerably more and more interesting stats than just how full the piss tank is. 
 
-I will not be adding any of them.
+We will not be adding any of them.
+
+## Contributors
+
+- [@Jaennaet](https://github.com/Jaennaet): initial idea and first version
+- [@durul](https://github.com/durul): code quality, LOS handling, iOS & visionOS versions
