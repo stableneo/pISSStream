@@ -17,14 +17,22 @@ struct pISSImmersiveView: View {
                 // Create a 3D model of the ISS waste tank
                 let tank = ModelEntity(
                     mesh: .generateCylinder(height: 2, radius: 0.5),
-                    materials: [SimpleMaterial(color: .init(white: 0.8, alpha: 0.5), isMetallic: true)]
+                    materials: [SimpleMaterial(
+                        color: .gray,
+                        roughness: 0.2,
+                        isMetallic: true
+                    )]
                 )
                 tank.name = "tank"
             
                 // Add fill level visualization
                 let fillLevel = ModelEntity(
-                    mesh: .generateCylinder(height: 2.0, radius: 0.48), // Changed initial height to match tank
-                    materials: [SimpleMaterial(color: .yellow.withAlphaComponent(0.7), isMetallic: true)]
+                    mesh: .generateCylinder(height: 2.0, radius: 0.45),
+                    materials: [SimpleMaterial(
+                        color: .yellow.withAlphaComponent(0.9),
+                        roughness: 1.0,
+                        isMetallic: false
+                    )]
                 )
                 fillLevel.name = "fillLevel"
             
