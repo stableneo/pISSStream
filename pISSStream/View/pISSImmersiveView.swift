@@ -23,14 +23,14 @@ struct pISSImmersiveView: View {
             
                 // Add fill level visualization
                 let fillLevel = ModelEntity(
-                    mesh: .generateCylinder(height: 0.1, radius: 0.48),
+                    mesh: .generateCylinder(height: 2.0, radius: 0.48), // Changed initial height to match tank
                     materials: [SimpleMaterial(color: .yellow.withAlphaComponent(0.7), isMetallic: true)]
                 )
                 fillLevel.name = "fillLevel"
             
                 // Position the models in front of the user
                 tank.position = SIMD3(x: 0, y: 1.5, z: -3)
-                fillLevel.position = SIMD3(x: 0, y: 0.5, z: -3)
+                fillLevel.position = SIMD3(x: 0, y: 1.5, z: -3) // Changed to match tank's Y position
             
                 // Add to content
                 content.add(tank)
@@ -42,7 +42,7 @@ struct pISSImmersiveView: View {
                     let fillPercentage = Float(appState.pissAmount.replacingOccurrences(of: "%", with: "")) ?? 0
                     let height = 2.0 * (fillPercentage / 100.0)
                     entity.scale = SIMD3(x: 1, y: Float(height), z: 1)
-                    entity.position.y = 0.5 + (height / 2)
+                    entity.position.y = 1.5 - (1.0 - height / 2) // Adjusted position calculation
                 }
             }
         #endif
