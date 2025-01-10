@@ -17,69 +17,71 @@ struct ContentView: View {
     #endif
     
     var body: some View {
-        VStack(spacing: 20) {
-            #if os(visionOS)
-            // 3D View Toggle Button at the top
-            Button(action: {
-                Task {
-                    if isImmersive {
-                        await dismissImmersiveSpace()
-                        isImmersive = false
-                    } else {
-                        await openImmersiveSpace(id: "ISSSpace")
-                        isImmersive = true
+        GeometryReader { geometry in
+            VStack(spacing: geometry.size.height * 0.05) { // Dynamic spacing
+                #if os(visionOS)
+                // 3D View Toggle Button at the top
+                Button(action: {
+                    Task {
+                        if isImmersive {
+                            await dismissImmersiveSpace()
+                            isImmersive = false
+                        } else {
+                            await openImmersiveSpace(id: "ISSSpace")
+                            isImmersive = true
+                        }
                     }
+                }) {
+                    Label(
+                        isImmersive ? "Exit 3D View" : "View in 3D",
+                        systemImage: isImmersive ? "arrow.down.right.and.arrow.up.left" : "view.3d"
+                    )
+                    .font(.system(size: min(geometry.size.width, geometry.size.height) * 0.03))
                 }
-            }) {
-                Label(
-                    isImmersive ? "Exit 3D View" : "View in 3D",
-                    systemImage: isImmersive ? "arrow.down.right.and.arrow.up.left" : "view.3d"
-                )
-                .font(.headline)
-            }
-            .buttonStyle(.borderedProminent)
-            .padding(.top, 20)
-            #endif
-            
-            // Status indicator
-            HStack {
-                Circle()
-                    .fill(appState.getStatusColor())
-                    .frame(width: 12, height: 12)
-                Text(appState.getStatusText())
-                    .font(.subheadline)
-            }
-            
-            // Main display
-            VStack(spacing: 8) {
-                Text("ISS Waste Tank Level")
-                    .font(.headline)
+                .buttonStyle(.borderedProminent)
+                .padding(.top, geometry.size.height * 0.03)
+                #endif
                 
-                Text(appState.pissAmount)
-                    .font(.system(size: 48, weight: .bold))
-                    .foregroundColor(.pissYellowDark)
-            }
-            .padding()
-            .background(
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(Color.pissYellowLight.opacity(0.2))
-            )
-            
-            // Astronaut emoji
-            Text("🧑🏽‍🚀🚽")
-                .font(.system(size: 32))
-        }
-        .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        #if os(visionOS)
-            .onAppear {
-                // Automatically open immersive space when view appears
-                Task {
-                    try? await Task.sleep(for: .seconds(1))
-                    await openImmersiveSpace(id: "ISSSpace")
-                    isImmersive = true
+                // Status indicator
+                HStack {
+                    Circle()
+                        .fill(appState.getStatusColor())
+                        .frame(width: geometry.size.width * 0.02, height: geometry.size.width * 0.02)
+                    Text(appState.getStatusText())
+                        .font(.system(size: min(geometry.size.width, geometry.size.height) * 0.025))
                 }
+                
+                // Main display
+                VStack(spacing: geometry.size.height * 0.02) {
+                    Text("ISS Waste Tank Level")
+                        .font(.system(size: min(geometry.size.width, geometry.size.height) * 0.035))
+                    
+                    Text(appState.pissAmount)
+                        .font(.system(size: min(geometry.size.width, geometry.size.height) * 0.08, weight: .bold))
+                        .foregroundColor(.pissYellowDark)
+                }
+                .padding(min(geometry.size.width, geometry.size.height) * 0.03)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(Color.pissYellowLight.opacity(0.2))
+                )
+                
+                // Astronaut emoji
+                Text("🧑🏽‍🚀🚽")
+                    .font(.system(size: min(geometry.size.width, geometry.size.height) * 0.06))
             }
+            .padding(min(geometry.size.width, geometry.size.height) * 0.03)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
+        #if os(visionOS)
+        .onAppear {
+            // Automatically open immersive space when view appears
+            Task {
+                try? await Task.sleep(for: .seconds(1))
+                await openImmersiveSpace(id: "ISSSpace")
+                isImmersive = true
+            }
+        }
         #endif
     }
 }

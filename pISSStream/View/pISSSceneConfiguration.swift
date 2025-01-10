@@ -17,8 +17,8 @@ struct pISSSceneConfiguration: Scene {
                     .environmentObject(appState)
             }
 
-            .windowStyle(.plain)
-            .defaultSize(width: 400, height: 300)
+            .windowStyle(.automatic)
+            .defaultSize(width: 800, height: 500)
 
             ImmersiveSpace(id: "ISSSpace") {
                 pISSImmersiveView()
