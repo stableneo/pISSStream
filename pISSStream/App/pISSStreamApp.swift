@@ -17,7 +17,7 @@ struct pISSStreamApp: App {
             VStack {
                 Text(appState.getStatusText())
                     .foregroundColor(appState.getStatusColor())
-                    .font(.caption)
+                    .font(.headline)
 
                 Divider()
 

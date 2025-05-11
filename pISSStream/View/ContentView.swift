@@ -48,7 +48,7 @@ struct ContentView: View {
                         .fill(appState.getStatusColor())
                         .frame(width: geometry.size.width * 0.02, height: geometry.size.width * 0.02)
                     Text(appState.getStatusText())
-                        .font(.system(size: min(geometry.size.width, geometry.size.height) * 0.025))
+                        .font(.system(size: min(geometry.size.width, geometry.size.height) * 0.045))
                 }
                 
                 // Main display
