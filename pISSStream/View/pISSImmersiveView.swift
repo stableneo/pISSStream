@@ -35,7 +35,8 @@ struct pISSImmersiveView: View {
                     )]
                 )
                 tank.name = "tank"
-            
+                tank.addChild(createSpatialAudio())
+
                 // Determines the position of two cylinders (waste tank and fill level indicator) in a 3D environment
                 
                 // This positions the cylinder directly in front of the user, 1.5 units above the ground and 3 units away.
@@ -76,5 +77,28 @@ struct pISSImmersiveView: View {
                 }
             }
         #endif
+    }
+}
+
+extension pISSImmersiveView {
+    func createSpatialAudio() -> Entity {
+        let audioSource = Entity()
+        /*
+         • gain: -8 → relatively low volume
+         • gain: 0 → default (normal) volume
+         • gain: +6 → fairly high volume (use with caution)
+         */
+        audioSource.spatialAudio = SpatialAudioComponent(gain: 3)
+
+        // Setting directivity property
+        audioSource.spatialAudio?.directivity = .beam(focus: 1)
+        do {
+            let resource = try AudioFileResource.load(named: "deep-space", configuration: .init(shouldLoop: true))
+            audioSource.playAudio(resource)
+        } catch {
+            print("Error loading audio file: \\(error.localizedDescription)")
+        }
+
+        return audioSource
     }
 }
