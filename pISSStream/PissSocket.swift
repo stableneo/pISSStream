@@ -176,13 +176,13 @@ actor PissSocket {
         let pissTankSub = Subscription(
             subscriptionMode: .MERGE,
             items: ["NODE3000005"],
-            fields: ["Value", "Status", "TimeStamp"]
+            fields: ["Value", "Status"]
         )
 
         let signalStatusSub = Subscription(
             subscriptionMode: .MERGE,
             items: ["TIME_000001"],
-            fields: ["TimeStamp", "Status.Class", "Status"]
+            fields: ["Status.Class", "Status"]
         )
 
         /// SubscriptionDelegateImpl acts as a delegate, receiving data from the subscription and performing actions on it.
