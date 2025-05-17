@@ -13,6 +13,7 @@ struct SpatialTankMonitorView: View {
     @State private var anchorPosition: SIMD3<Float> = [0, 0.5, -3]
     // Gesture state for the drag translation offset (calculated from 2D gesture)
     @GestureState private var dragOffset: SIMD3<Float> = .zero
+    @State private var tankScale: Float = 1.0
 
     @EnvironmentObject var appState: AppStateViewModel
 
@@ -79,6 +80,11 @@ struct SpatialTankMonitorView: View {
 
                 // Apply position based on state + gesture offset
                 anchor.position = anchorPosition + dragOffset
+                
+                // Update tank scale based on pinch gesture
+                if let tankEntity = anchor.findEntity(named: "tank") as? ModelEntity {
+                    tankEntity.scale = [tankScale, tankScale, tankScale]
+                }
 
                 // Update fill level based on piss amount (relative to anchor)
                 if let fillLevelEntity = anchor.findEntity(named: "fillLevel") as? ModelEntity {
@@ -87,34 +93,36 @@ struct SpatialTankMonitorView: View {
                     
                     // Clamp the fill ratio between 0.0 (empty) and 1.0 (full), by dividing percentage by 100.
                     let fillRatio = max(0.0, min(1.0, fillPercentage / 100.0))
-                    
-                    // Calculate the height of the filled portion of the tank, scaled by the fill ratio.
-                    let scaledFillHeight = tankHeight * fillRatio
-                    
-                    // Scale the fillLevelEntity in the Y axis to visually represent the fill amount (minimum 0.001 to avoid disappearing).
-                    fillLevelEntity.scale = [1, max(0.001, fillRatio), 1]
+
+                    // Scale the fillLevelEntity in X and Z to match tankScale, Y is scaled according to fill ratio.
+                    fillLevelEntity.scale = [tankScale, max(0.001, fillRatio) * tankScale, tankScale]
                     
                     // Position the fillLevelEntity so its base stays at the bottom of the tank and its center rises with fill level.
-                    fillLevelEntity.position.y = -tankHeight / 2 + scaledFillHeight / 2
+                    // Y axis: Multiplied by both the fill rate and the new scale of the tank, it becomes completely synchronous.
+                    fillLevelEntity.position.y = -tankHeight * tankScale / 2 + (tankHeight * fillRatio * tankScale) / 2
                 }
             }
             .gesture(
-                // Use standard DragGesture and map 2D translation to 3D XZ plane
-                DragGesture(minimumDistance: 0)
-                    .targetedToAnyEntity()
-                    .updating($dragOffset) { value, state, _ in
-                        // Calculate 3D offset in XZ plane based on 2D drag
-                        let deltaX = Float(value.translation.width) * dragSensitivity
-                        // Map screen Y drag to world Z (negative Y down -> negative Z towards user)
-                        let deltaZ = Float(value.translation.height) * dragSensitivity * -1
-                        state = SIMD3<Float>(deltaX, 0, deltaZ) // Update offset, keeping Y constant
+                MagnifyGesture()
+                    .onChanged { value in
+                        tankScale = Float(value.magnification)
                     }
-                    .onEnded { value in
-                        // Calculate final 3D offset and apply to the base position
-                        let deltaX = Float(value.translation.width) * dragSensitivity
-                        let deltaZ = Float(value.translation.height) * dragSensitivity * -1
-                        anchorPosition += SIMD3<Float>(deltaX, 0, deltaZ)
-                    }
+                    .simultaneously(
+                        with:
+                            DragGesture(minimumDistance: 0)
+                                .targetedToAnyEntity()
+                                .updating($dragOffset) { value, state, _ in
+                                    // DragGesture behavior changes proportionally to tank size as tank grows/shrinks. Drag is now natural at all sizes.
+                                    let deltaX = Float(value.translation.width) * dragSensitivity / tankScale
+                                    let deltaZ = Float(value.translation.height) * dragSensitivity * -1 / tankScale
+                                    state = SIMD3<Float>(deltaX, 0, deltaZ)
+                                }
+                                .onEnded { value in
+                                    let deltaX = Float(value.translation.width) * dragSensitivity / tankScale
+                                    let deltaZ = Float(value.translation.height) * dragSensitivity * -1 / tankScale
+                                    anchorPosition += SIMD3<Float>(deltaX, 0, deltaZ)
+                                }
+                    )
             )
         #endif
     }
