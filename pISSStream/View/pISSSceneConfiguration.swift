@@ -24,7 +24,7 @@ struct pISSSceneConfiguration: Scene {
             .defaultSize(width: 0.6, height: 0.6, depth: 0.4, in: .meters)
 
             ImmersiveSpace(id: "ISSSpace") {
-                pISSImmersiveView()
+                SpatialTankMonitorView()
                     .environmentObject(appState)
             }
 
