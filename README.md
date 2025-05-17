@@ -10,6 +10,8 @@ pISSStream is a menu bar app that shows how full the International Space Station
 - macOS menu bar integration
 - iOS app with live updates
 - visionOS immersive 3D visualization
+- **Spatial audio with deep-space soundscape in immersive view**
+- Enhanced UI and custom app icon for Vision Pro
 - Uses NASA's official public ISS telemetry stream via [Lightstreamer](https://lightstreamer.com/)
 
 ## Installation
@@ -46,7 +48,7 @@ open pISSStream.xcodeproj
 
 Note: If you don't have an Apple Developer account, you can still run the app in the simulator or on your device for up to 7 days using a free provisioning profile.
 
-For **visionOS** development, you'll need the visionOS SDK installed in Xcode. The app uses the ImmersiveSpace API for the 3D visualization experience.
+For **visionOS** development, you'll need the visionOS SDK installed in Xcode. The app uses the ImmersiveSpace API for the 3D visualization experience and features spatial audio for enhanced immersion.
 
 ## Requirements
 - Mac with Apple silicon
@@ -80,11 +82,11 @@ For **visionOS** development, you'll need the visionOS SDK installed in Xcode. T
 ## Usage
 
 #### macOS
-When pISSStream can connect to Lightstreamer and the ISS telemetry signal is being received by the ground station, the menu bar item shows 🧑🏽‍🚀🚽 alongside the fill percentage, and the menu simply reads "Connected"
+When pISSStream can connect to Lightstreamer and the ISS telemetry signal is being received by the ground station, the menu bar item shows 🧑🏽‍🚀🚽 alongside the fill percentage, and the app icon reflects the latest UI enhancements.
 
 ![](https://panthercap.us-east.host.bsky.network/xrpc/com.atproto.sync.getBlob?did=did%3Aplc%3Acl3kuq4sxg3jpfjtom4gnamx&cid=bafkreiaykjgxzlvaf5jjp66uobqlapqcsb2zg7vobs2b47bwf54xnisgma)
 
-If either the connection to Lightstreamer or the ISS telemetry signal itself is lost, the menu bar item shows 🧑🏽‍🚀❗and the last received value if any, and the menu reads either "Connection Lost" or "Signal Lost (LOS)":
+If either the connection to Lightstreamer or the ISS telemetry signal itself is lost, the menu bar item shows 🧑🏽‍🚀❗and the last received value if any, and the menu reads either "Connecting" or "No Signal".
 
 ![](https://panthercap.us-east.host.bsky.network/xrpc/com.atproto.sync.getBlob?did=did%3Aplc%3Acl3kuq4sxg3jpfjtom4gnamx&cid=bafkreighfm74uy74zcz4pxk2rw4p5b2ts4tezebtkbyyocngqmyiyvenam)
 
@@ -96,9 +98,6 @@ Launch the app to view the current tank level in a simple interface.
 
 #### visionOS
 Experience the ISS waste tank in immersive 3D with real-time fill-level visualization.
-
-
-
 
 https://github.com/user-attachments/assets/bc0d7417-771b-44ac-bf8c-6ebefec7a888
 
