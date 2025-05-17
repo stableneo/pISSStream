@@ -129,6 +129,7 @@ struct SpatialTankMonitorView: View {
 }
 
 extension SpatialTankMonitorView {
+    @available(macOS 15.0, *)
     func createSpatialAudio() -> Entity {
         let audioSource = Entity()
         /*
