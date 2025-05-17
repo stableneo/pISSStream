@@ -1,8 +1,10 @@
 # pISSStream
 
-pISSStream is a menu bar app that shows how full the International Space Station's urine tank is in real time. Available for macOS, iOS, and visionOS.
+pISSStream is a menu bar app that shows the International Space Station's urine tank's capacity in real-time. It is available for macOS, iOS, and visionOS.
 
-[Download](https://github.com/Jaennaet/pISSStream/releases/download/v0.2/pISSStream.0.2.dmg) yours while supplies last!
+## Official Icon
+
+<img src="pISSStream/Assets.xcassets/LaunchImage.imageset/image.png" alt="Launch Image" width="200" style="border-radius: 12px;" />
 
 ## Features
 
@@ -21,6 +23,7 @@ pISSStream is a menu bar app that shows how full the International Space Station
 ![](https://panthercap.us-east.host.bsky.network/xrpc/com.atproto.sync.getBlob?did=did%3Aplc%3Acl3kuq4sxg3jpfjtom4gnamx&cid=bafkreidthbrhc7pjez4g445dpontwyefusimny45kja57twy2obshwtsn4)
 
 [Download](https://github.com/Jaennaet/pISSStream/releases/download/v0.2/pISSStream.0.2.dmg) the latest release DMG.
+
 
 ### iOS & visionOS
 Due to Apple's security model, you'll need to build from source and sign with your own developer account:
