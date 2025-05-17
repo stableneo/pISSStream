@@ -442,7 +442,7 @@
 				FUSE_BUILD_SCRIPT_PHASES = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pISSStream/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_CFBundleDisplayName = pISSStream;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -450,7 +450,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14;
-				MARKETING_VERSION = 0.2;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -481,7 +481,7 @@
 				FUSE_BUILD_SCRIPT_PHASES = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pISSStream/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_CFBundleDisplayName = pISSStream;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -489,7 +489,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14;
-				MARKETING_VERSION = 0.2;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
