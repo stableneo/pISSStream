@@ -1,6 +1,6 @@
 # pISSStream
 
-pISSStream is a menu bar app that shows the International Space Station's urine tank's capacity in real-time. It is available for macOS, iOS, and visionOS.
+pISSStream is a menu bar app that shows the International Space Station's urine tank's capacity in real-time. It is available for macOS, watchOS, iOS, and visionOS.
 
 ## Official Icon
 
@@ -10,7 +10,7 @@ pISSStream is a menu bar app that shows the International Space Station's urine 
 
 - Real-time ISS urine tank level monitoring
 - macOS menu bar integration
-- iOS app with live updates
+- iOS and watchOS app with live updates
 - visionOS immersive 3D visualization
 - **Spatial audio with deep-space soundscape in immersive view**
 - Enhanced UI and custom app icon for Vision Pro
@@ -25,7 +25,7 @@ pISSStream is a menu bar app that shows the International Space Station's urine 
 [Download](https://github.com/Jaennaet/pISSStream/releases/download/v0.2/pISSStream.0.2.dmg) the latest release DMG.
 
 
-### iOS & visionOS
+### iOS, watchOS & visionOS
 Due to Apple's security model, you'll need to build from source and sign with your own developer account:
 
 1. Prerequisites:
@@ -105,6 +105,12 @@ Experience the ISS waste tank in immersive 3D with real-time fill-level visualiz
 https://github.com/user-attachments/assets/b24c6752-0fb8-4a2e-bf3c-6dab13f2c5e2
 
 
+#### watchOS
+Track the ISS waste tank fill level in real time — right from your wrist.
+
+
+
+
 ## But why?
 
 For some inexplicable reason people keep asking me why I ([@Jaennaet](https://github.com/Jaennaet)) did this.
@@ -133,4 +139,4 @@ We will not be adding any of them.
 ## Contributors
 
 - [@Jaennaet](https://github.com/Jaennaet): initial idea and first version
-- [@durul](https://github.com/durul): code quality, LOS handling, iOS & visionOS versions
+- [@durul](https://github.com/durul): code quality, LOS handling, iOS, watchOS & visionOS versions

@@ -1,7 +1,6 @@
 {
-  "images" : [
+  "colors" : [
     {
-      "filename" : "watch-marketing.png",
       "idiom" : "universal"
     }
   ],

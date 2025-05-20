@@ -5,7 +5,6 @@
 //  Created by durul dalkanat on 12/25/24.
 //
 
-import BackgroundTasks
 import LightstreamerClient
 import os
 import SwiftUI

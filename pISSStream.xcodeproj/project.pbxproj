@@ -7,10 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA210A432DDD202B009B4249 /* LightstreamerClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA210A422DDD202B009B4249 /* LightstreamerClient */; };
 		D48D39102D1301C1006288CB /* LightstreamerClient in Frameworks */ = {isa = PBXBuildFile; productRef = D48D390F2D1301C1006288CB /* LightstreamerClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CA210A212DDD1E71009B4249 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D48D38D42D12F51C006288CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA210A132DDD1E70009B4249;
+			remoteInfo = "pISSStreamWatchApp Watch App";
+		};
+		CA210A2B2DDD1E71009B4249 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D48D38D42D12F51C006288CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA210A132DDD1E70009B4249;
+			remoteInfo = "pISSStreamWatchApp Watch App";
+		};
 		D48D38EE2D12F51D006288CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D48D38D42D12F51C006288CB /* Project object */;
@@ -28,12 +43,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA210A142DDD1E70009B4249 /* pISSStreamWatchApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pISSStreamWatchApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA210A202DDD1E71009B4249 /* pISSStreamWatchApp Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pISSStreamWatchApp Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA210A2A2DDD1E71009B4249 /* pISSStreamWatchApp Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pISSStreamWatchApp Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48D38DC2D12F51C006288CB /* pISSStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pISSStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48D38ED2D12F51D006288CB /* pISSStreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pISSStreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48D38F72D12F51D006288CB /* pISSStreamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pISSStreamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CA210A402DDD1EA5009B4249 /* Exceptions for "pISSStream" folder in "pISSStreamWatchApp Watch App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				PissSocket.swift,
+				Utils/ExtensionColors.swift,
+				ViewModel/AppStateViewModel.swift,
+			);
+			target = CA210A132DDD1E70009B4249 /* pISSStreamWatchApp Watch App */;
+		};
 		CAB3D15E2D1CD2B1001CF071 /* Exceptions for "pISSStream" folder in "pISSStream" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -47,10 +74,26 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		CA210A152DDD1E70009B4249 /* pISSStreamWatchApp Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "pISSStreamWatchApp Watch App";
+			sourceTree = "<group>";
+		};
+		CA210A232DDD1E71009B4249 /* pISSStreamWatchApp Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "pISSStreamWatchApp Watch AppTests";
+			sourceTree = "<group>";
+		};
+		CA210A2D2DDD1E71009B4249 /* pISSStreamWatchApp Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "pISSStreamWatchApp Watch AppUITests";
+			sourceTree = "<group>";
+		};
 		D48D38DE2D12F51C006288CB /* pISSStream */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				CAB3D15E2D1CD2B1001CF071 /* Exceptions for "pISSStream" folder in "pISSStream" target */,
+				CA210A402DDD1EA5009B4249 /* Exceptions for "pISSStream" folder in "pISSStreamWatchApp Watch App" target */,
 			);
 			path = pISSStream;
 			sourceTree = "<group>";
@@ -68,6 +111,28 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CA210A112DDD1E70009B4249 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA210A432DDD202B009B4249 /* LightstreamerClient in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA210A1D2DDD1E71009B4249 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA210A272DDD1E71009B4249 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D48D38D92D12F51C006288CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -99,6 +164,9 @@
 				D48D38DE2D12F51C006288CB /* pISSStream */,
 				D48D38F02D12F51D006288CB /* pISSStreamTests */,
 				D48D38FA2D12F51D006288CB /* pISSStreamUITests */,
+				CA210A152DDD1E70009B4249 /* pISSStreamWatchApp Watch App */,
+				CA210A232DDD1E71009B4249 /* pISSStreamWatchApp Watch AppTests */,
+				CA210A2D2DDD1E71009B4249 /* pISSStreamWatchApp Watch AppUITests */,
 				D48D390E2D1301BE006288CB /* Frameworks */,
 				D48D38DD2D12F51C006288CB /* Products */,
 			);
@@ -110,6 +178,9 @@
 				D48D38DC2D12F51C006288CB /* pISSStream.app */,
 				D48D38ED2D12F51D006288CB /* pISSStreamTests.xctest */,
 				D48D38F72D12F51D006288CB /* pISSStreamUITests.xctest */,
+				CA210A142DDD1E70009B4249 /* pISSStreamWatchApp Watch App.app */,
+				CA210A202DDD1E71009B4249 /* pISSStreamWatchApp Watch AppTests.xctest */,
+				CA210A2A2DDD1E71009B4249 /* pISSStreamWatchApp Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +195,75 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CA210A132DDD1E70009B4249 /* pISSStreamWatchApp Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA210A3C2DDD1E71009B4249 /* Build configuration list for PBXNativeTarget "pISSStreamWatchApp Watch App" */;
+			buildPhases = (
+				CA210A102DDD1E70009B4249 /* Sources */,
+				CA210A112DDD1E70009B4249 /* Frameworks */,
+				CA210A122DDD1E70009B4249 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				CA210A152DDD1E70009B4249 /* pISSStreamWatchApp Watch App */,
+			);
+			name = "pISSStreamWatchApp Watch App";
+			packageProductDependencies = (
+				CA210A422DDD202B009B4249 /* LightstreamerClient */,
+			);
+			productName = "pISSStreamWatchApp Watch App";
+			productReference = CA210A142DDD1E70009B4249 /* pISSStreamWatchApp Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CA210A1F2DDD1E71009B4249 /* pISSStreamWatchApp Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA210A3D2DDD1E71009B4249 /* Build configuration list for PBXNativeTarget "pISSStreamWatchApp Watch AppTests" */;
+			buildPhases = (
+				CA210A1C2DDD1E71009B4249 /* Sources */,
+				CA210A1D2DDD1E71009B4249 /* Frameworks */,
+				CA210A1E2DDD1E71009B4249 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA210A222DDD1E71009B4249 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CA210A232DDD1E71009B4249 /* pISSStreamWatchApp Watch AppTests */,
+			);
+			name = "pISSStreamWatchApp Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "pISSStreamWatchApp Watch AppTests";
+			productReference = CA210A202DDD1E71009B4249 /* pISSStreamWatchApp Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CA210A292DDD1E71009B4249 /* pISSStreamWatchApp Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA210A3E2DDD1E71009B4249 /* Build configuration list for PBXNativeTarget "pISSStreamWatchApp Watch AppUITests" */;
+			buildPhases = (
+				CA210A262DDD1E71009B4249 /* Sources */,
+				CA210A272DDD1E71009B4249 /* Frameworks */,
+				CA210A282DDD1E71009B4249 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA210A2C2DDD1E71009B4249 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CA210A2D2DDD1E71009B4249 /* pISSStreamWatchApp Watch AppUITests */,
+			);
+			name = "pISSStreamWatchApp Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "pISSStreamWatchApp Watch AppUITests";
+			productReference = CA210A2A2DDD1E71009B4249 /* pISSStreamWatchApp Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D48D38DB2D12F51C006288CB /* pISSStream */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D48D39012D12F51D006288CB /* Build configuration list for PBXNativeTarget "pISSStream" */;
@@ -201,9 +341,20 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1620;
+				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
+					CA210A132DDD1E70009B4249 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					CA210A1F2DDD1E71009B4249 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = CA210A132DDD1E70009B4249;
+					};
+					CA210A292DDD1E71009B4249 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = CA210A132DDD1E70009B4249;
+					};
 					D48D38DB2D12F51C006288CB = {
 						CreatedOnToolsVersion = 16.2;
 					};
@@ -237,11 +388,35 @@
 				D48D38DB2D12F51C006288CB /* pISSStream */,
 				D48D38EC2D12F51D006288CB /* pISSStreamTests */,
 				D48D38F62D12F51D006288CB /* pISSStreamUITests */,
+				CA210A132DDD1E70009B4249 /* pISSStreamWatchApp Watch App */,
+				CA210A1F2DDD1E71009B4249 /* pISSStreamWatchApp Watch AppTests */,
+				CA210A292DDD1E71009B4249 /* pISSStreamWatchApp Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CA210A122DDD1E70009B4249 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA210A1E2DDD1E71009B4249 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA210A282DDD1E71009B4249 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D48D38DA2D12F51C006288CB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -266,6 +441,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CA210A102DDD1E70009B4249 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA210A1C2DDD1E71009B4249 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA210A262DDD1E71009B4249 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D48D38D82D12F51C006288CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,6 +486,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CA210A222DDD1E71009B4249 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA210A132DDD1E70009B4249 /* pISSStreamWatchApp Watch App */;
+			targetProxy = CA210A212DDD1E71009B4249 /* PBXContainerItemProxy */;
+		};
+		CA210A2C2DDD1E71009B4249 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA210A132DDD1E70009B4249 /* pISSStreamWatchApp Watch App */;
+			targetProxy = CA210A2B2DDD1E71009B4249 /* PBXContainerItemProxy */;
+		};
 		D48D38EF2D12F51D006288CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D48D38DB2D12F51C006288CB /* pISSStream */;
@@ -307,6 +513,149 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		CA210A362DDD1E71009B4249 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = pISSStreamWatchApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = social.bsky.jaennaet.pISSStream;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStream.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		CA210A372DDD1E71009B4249 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = pISSStreamWatchApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = social.bsky.jaennaet.pISSStream;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStream.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+		CA210A382DDD1E71009B4249 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MVFU2L7FRK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.durul.pISSStreamWatchApp-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pISSStreamWatchApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pISSStreamWatchApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		CA210A392DDD1E71009B4249 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MVFU2L7FRK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.durul.pISSStreamWatchApp-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pISSStreamWatchApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pISSStreamWatchApp Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+		CA210A3A2DDD1E71009B4249 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MVFU2L7FRK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.durul.pISSStreamWatchApp-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "pISSStreamWatchApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		CA210A3B2DDD1E71009B4249 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MVFU2L7FRK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.durul.pISSStreamWatchApp-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "pISSStreamWatchApp Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
 		D48D38FF2D12F51D006288CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -570,6 +919,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CA210A3C2DDD1E71009B4249 /* Build configuration list for PBXNativeTarget "pISSStreamWatchApp Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA210A362DDD1E71009B4249 /* Debug */,
+				CA210A372DDD1E71009B4249 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA210A3D2DDD1E71009B4249 /* Build configuration list for PBXNativeTarget "pISSStreamWatchApp Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA210A382DDD1E71009B4249 /* Debug */,
+				CA210A392DDD1E71009B4249 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA210A3E2DDD1E71009B4249 /* Build configuration list for PBXNativeTarget "pISSStreamWatchApp Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA210A3A2DDD1E71009B4249 /* Debug */,
+				CA210A3B2DDD1E71009B4249 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D48D38D72D12F51C006288CB /* Build configuration list for PBXProject "pISSStream" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -620,6 +996,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CA210A422DDD202B009B4249 /* LightstreamerClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D48D390B2D12FABA006288CB /* XCRemoteSwiftPackageReference "Lightstreamer-lib-client-swift" */;
+			productName = LightstreamerClient;
+		};
 		D48D390C2D12FAD5006288CB /* LightstreamerClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D48D390B2D12FABA006288CB /* XCRemoteSwiftPackageReference "Lightstreamer-lib-client-swift" */;
