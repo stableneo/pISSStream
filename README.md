@@ -102,8 +102,7 @@ Launch the app to view the current tank level in a simple interface.
 #### visionOS
 Experience the ISS waste tank in immersive 3D with real-time fill-level visualization.
 
-https://github.com/user-attachments/assets/bc0d7417-771b-44ac-bf8c-6ebefec7a888
-
+https://github.com/user-attachments/assets/b24c6752-0fb8-4a2e-bf3c-6dab13f2c5e2
 
 
 ## But why?
