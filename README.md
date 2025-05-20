@@ -4,7 +4,7 @@ pISSStream is a menu bar app that shows the International Space Station's urine 
 
 ## Official Icon
 
-<img src="pISSStream/Assets.xcassets/LaunchImage.imageset/image.png" alt="Launch Image" width="200" style="border-radius: 12px;" />
+<img src="pISSStream/Assets.xcassets/AppIcon.appiconset/icon_512x512.png" alt="Launch Image" width="200" style="border-radius: 12px;" />
 
 ## Features
 
@@ -107,6 +107,10 @@ https://github.com/user-attachments/assets/b24c6752-0fb8-4a2e-bf3c-6dab13f2c5e2
 
 #### watchOS
 Track the ISS waste tank fill level in real time — right from your wrist.
+
+
+
+https://github.com/user-attachments/assets/f342fc59-0f2e-47db-88f9-d11746a863a2
 
 
 
