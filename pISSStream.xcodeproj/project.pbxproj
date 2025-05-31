@@ -7,11 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B592D42D2DEB58E400D23145 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B592D42C2DEB58E400D23145 /* WidgetKit.framework */; };
+		B592D42F2DEB58E400D23145 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B592D42E2DEB58E400D23145 /* SwiftUI.framework */; };
+		B592D43B2DEB58E500D23145 /* pISSStreamWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B592D42B2DEB58E400D23145 /* pISSStreamWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CA210A432DDD202B009B4249 /* LightstreamerClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA210A422DDD202B009B4249 /* LightstreamerClient */; };
 		D48D39102D1301C1006288CB /* LightstreamerClient in Frameworks */ = {isa = PBXBuildFile; productRef = D48D390F2D1301C1006288CB /* LightstreamerClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B592D4392DEB58E500D23145 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D48D38D42D12F51C006288CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B592D42A2DEB58E400D23145;
+			remoteInfo = pISSStreamWidgetExtension;
+		};
 		CA210A212DDD1E71009B4249 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D48D38D42D12F51C006288CB /* Project object */;
@@ -42,7 +52,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B592D4402DEB58E500D23145 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B592D43B2DEB58E500D23145 /* pISSStreamWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B592D42B2DEB58E400D23145 /* pISSStreamWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = pISSStreamWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B592D42C2DEB58E400D23145 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = /System/Library/Frameworks/WidgetKit.framework; sourceTree = "<absolute>"; };
+		B592D42E2DEB58E400D23145 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = /System/Library/Frameworks/SwiftUI.framework; sourceTree = "<absolute>"; };
 		CA210A142DDD1E70009B4249 /* pISSStreamWatchApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pISSStreamWatchApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA210A202DDD1E71009B4249 /* pISSStreamWatchApp Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pISSStreamWatchApp Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA210A2A2DDD1E71009B4249 /* pISSStreamWatchApp Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pISSStreamWatchApp Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +79,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B592D43F2DEB58E500D23145 /* Exceptions for "pISSStreamWidget" folder in "pISSStreamWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B592D42A2DEB58E400D23145 /* pISSStreamWidgetExtension */;
+		};
 		CA210A402DDD1EA5009B4249 /* Exceptions for "pISSStream" folder in "pISSStreamWatchApp Watch App" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -74,6 +108,14 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		B592D4302DEB58E400D23145 /* pISSStreamWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B592D43F2DEB58E500D23145 /* Exceptions for "pISSStreamWidget" folder in "pISSStreamWidgetExtension" target */,
+			);
+			path = pISSStreamWidget;
+			sourceTree = "<group>";
+		};
 		CA210A152DDD1E70009B4249 /* pISSStreamWatchApp Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "pISSStreamWatchApp Watch App";
@@ -111,6 +153,15 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B592D4282DEB58E400D23145 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B592D42F2DEB58E400D23145 /* SwiftUI.framework in Frameworks */,
+				B592D42D2DEB58E400D23145 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA210A112DDD1E70009B4249 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,6 +218,7 @@
 				CA210A152DDD1E70009B4249 /* pISSStreamWatchApp Watch App */,
 				CA210A232DDD1E71009B4249 /* pISSStreamWatchApp Watch AppTests */,
 				CA210A2D2DDD1E71009B4249 /* pISSStreamWatchApp Watch AppUITests */,
+				B592D4302DEB58E400D23145 /* pISSStreamWidget */,
 				D48D390E2D1301BE006288CB /* Frameworks */,
 				D48D38DD2D12F51C006288CB /* Products */,
 			);
@@ -181,6 +233,7 @@
 				CA210A142DDD1E70009B4249 /* pISSStreamWatchApp Watch App.app */,
 				CA210A202DDD1E71009B4249 /* pISSStreamWatchApp Watch AppTests.xctest */,
 				CA210A2A2DDD1E71009B4249 /* pISSStreamWatchApp Watch AppUITests.xctest */,
+				B592D42B2DEB58E400D23145 /* pISSStreamWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,6 +241,8 @@
 		D48D390E2D1301BE006288CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B592D42C2DEB58E400D23145 /* WidgetKit.framework */,
+				B592D42E2DEB58E400D23145 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -195,6 +250,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B592D42A2DEB58E400D23145 /* pISSStreamWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B592D43C2DEB58E500D23145 /* Build configuration list for PBXNativeTarget "pISSStreamWidgetExtension" */;
+			buildPhases = (
+				B592D4272DEB58E400D23145 /* Sources */,
+				B592D4282DEB58E400D23145 /* Frameworks */,
+				B592D4292DEB58E400D23145 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B592D4302DEB58E400D23145 /* pISSStreamWidget */,
+			);
+			name = pISSStreamWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = pISSStreamWidgetExtension;
+			productReference = B592D42B2DEB58E400D23145 /* pISSStreamWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		CA210A132DDD1E70009B4249 /* pISSStreamWatchApp Watch App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA210A3C2DDD1E71009B4249 /* Build configuration list for PBXNativeTarget "pISSStreamWatchApp Watch App" */;
@@ -271,11 +348,13 @@
 				D48D38D82D12F51C006288CB /* Sources */,
 				D48D38D92D12F51C006288CB /* Frameworks */,
 				D48D38DA2D12F51C006288CB /* Resources */,
+				B592D4402DEB58E500D23145 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				D48D390D2D12FAD5006288CB /* PBXTargetDependency */,
+				B592D43A2DEB58E500D23145 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				D48D38DE2D12F51C006288CB /* pISSStream */,
@@ -344,6 +423,10 @@
 				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
+					B592D42A2DEB58E400D23145 = {
+						CreatedOnToolsVersion = 16.3;
+						LastSwiftMigration = 1630;
+					};
 					CA210A132DDD1E70009B4249 = {
 						CreatedOnToolsVersion = 16.3;
 					};
@@ -391,11 +474,19 @@
 				CA210A132DDD1E70009B4249 /* pISSStreamWatchApp Watch App */,
 				CA210A1F2DDD1E71009B4249 /* pISSStreamWatchApp Watch AppTests */,
 				CA210A292DDD1E71009B4249 /* pISSStreamWatchApp Watch AppUITests */,
+				B592D42A2DEB58E400D23145 /* pISSStreamWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B592D4292DEB58E400D23145 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA210A122DDD1E70009B4249 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -441,6 +532,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B592D4272DEB58E400D23145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA210A102DDD1E70009B4249 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -486,6 +584,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B592D43A2DEB58E500D23145 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B592D42A2DEB58E400D23145 /* pISSStreamWidgetExtension */;
+			targetProxy = B592D4392DEB58E500D23145 /* PBXContainerItemProxy */;
+		};
 		CA210A222DDD1E71009B4249 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CA210A132DDD1E70009B4249 /* pISSStreamWatchApp Watch App */;
@@ -513,6 +616,89 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		B592D43D2DEB58E500D23145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = pISSStreamWidget/pISSStreamWidget.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 543YKMKB3W;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = pISSStreamWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = pISSStreamWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStream.pISSStreamWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.4;
+			};
+			name = Debug;
+		};
+		B592D43E2DEB58E500D23145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = pISSStreamWidget/pISSStreamWidget.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 543YKMKB3W;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = pISSStreamWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = pISSStreamWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = social.bsky.jaennaet.pISSStream.pISSStreamWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.4;
+			};
+			name = Release;
+		};
 		CA210A362DDD1E71009B4249 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -781,11 +967,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = pISSStream/pISSStream.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pISSStream/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 543YKMKB3W;
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				FUSE_BUILD_SCRIPT_PHASES = NO;
@@ -820,11 +1006,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = pISSStream/pISSStream.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pISSStream/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 543YKMKB3W;
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				FUSE_BUILD_SCRIPT_PHASES = NO;
@@ -919,6 +1105,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B592D43C2DEB58E500D23145 /* Build configuration list for PBXNativeTarget "pISSStreamWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B592D43D2DEB58E500D23145 /* Debug */,
+				B592D43E2DEB58E500D23145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CA210A3C2DDD1E71009B4249 /* Build configuration list for PBXNativeTarget "pISSStreamWatchApp Watch App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
